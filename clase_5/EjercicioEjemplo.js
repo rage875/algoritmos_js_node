@@ -1,5 +1,5 @@
 //Ejercicio ejemplo
-const pesosPorDia = parseFloat("10");
+const pesosPorDia = parseFloat(process.argv[2]);
 const pesosTotalesAhorrar = 10000;
 const cantidadDias = 30;
 const cantidadQuePuedeAhorrar = cantidadDias * pesosPorDia;
