@@ -1,0 +1,48 @@
+Ejercicio de arreglos
+
+1- A Daniel le acaban de mandar una lista con sus calificaciones, quiere saber si su promedio
+es suficiente para tener una beca este año, el promedio mínimo que necesita es 8, el programa
+recibirá la cantidad de calificaciones y un arreglo de calificaciones para poder calcular el resultado
+
+Ejercicio1
+INICIO
+    LEER listCalif
+    LEER cantCalif
+    promBeca = 8
+    promedio = 0
+
+    PARA indice = 0 MIENTRAS indice < listCalif.length AUMENTA indice = indice + 1
+        promedio = promedio + listCalif[indice]
+
+    promedio /= listCalif.length
+
+    SI(promBeca <= promBeca)
+        ESCRIBIR "Promedio para beca alcanzado"
+    SINO
+        ESCRIBIR "Promedio no alcanzado para beca"
+
+FIN-PARA
+
+
+2- Joel quiere ver el porcentaje de veces que falto a clases, el programa recibirá la cantidad de asistencias y
+un arreglo de asistencias para poder calcular el resultado, cada elemento esta representado por un valor booleano
+
+INICIO
+
+FIN
+
+3- Paco no estudió mucho para sus últimos exámenes, quiere saber cuántos exámenes tendrá que realizar de nuevo,
+el programa recibirá la cantidad de exámenes y un arreglo de calificaciones para poder calcular el resultado
+
+
+Ejercicio de objectos
+
+1 - Joel tiene que informar a sus alumnos quienes tienen que repetir curso, el tiene una lista de alumnos,
+cada alumno tiene un nombre y una lista de calificaciones que se tienen que promediar para saber si
+el alumno está aprobado, el promedio mínimo para aprobar es 6. Haz un algoritmo que escriba el nombre de
+los alumnos que no aprobaron.
+
+2 - Joel tiene que informar a sus alumnos las materias que reprobaron, el tiene una lista de alumnos,
+cada alumno tiene un nombre y una lista de materias, cada materia tiene su nombre y su calificación,
+el promedio mínimo para aprobar es 6. Haz un algoritmo que escriba el nombre del alumno y la materia
+que reprobó
