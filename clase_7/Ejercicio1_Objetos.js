@@ -18,7 +18,7 @@ for(let i=0; i < listAlumno.length; i++){
         promedio += listAlumno[i].listCalif[j];
     }
     promedio /= listAlumno[i].listCalif.length;
-    console.log(promedio)
+    //console.log(promedio)
 
     if(califMinAprob > promedio)
     {
