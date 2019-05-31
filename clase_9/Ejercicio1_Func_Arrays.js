@@ -14,12 +14,7 @@ function promedioSufBeca(listCalif) {
     }
     promedio /= listCalif.length
 
-    if(minCalfAprob <= promedio)
-    {
-        beca = true
-    }
-
-    return beca;
+    return (minCalfAprob <= promedio)
 }
 
 const persona = {

@@ -12,9 +12,7 @@ function porcDeAsist(listAsist) {
         }
     }
  
-    promedio = numAsist * 100 / cantAsist
-
-    return promedio
+    return  (numAsist * 100 / cantAsist)
 }
 
 const persona = {
