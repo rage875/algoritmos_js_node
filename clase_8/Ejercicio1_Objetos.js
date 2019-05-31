@@ -4,7 +4,7 @@
 // algoritmo que escriba el nombre del alumno con mayor edad
 
 const listAlumno = [
-    {nombre : "Alum1", edad : 15},
+    {"nombre" : "Alum1", edad : 15},
     {nombre : "Alum2", edad : 16},
     {nombre : "Alum3", edad : 14}
 ]
@@ -18,5 +18,6 @@ for(let i=0; i < listAlumno.length; i++){
         alumnoMayor = listAlumno[i].nombre
     }
 }
+
 
 console.log("El alumno mayor es:",alumnoMayor," de: ",mayorEdad," a;os")
