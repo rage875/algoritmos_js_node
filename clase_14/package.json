@@ -1,0 +1,23 @@
+{
+  "name": "clase_14",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rage875/clase_14.git"
+  },
+  "keywords": [],
+  "author": "Luis03 <rage.875@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rage875/clase_14/issues"
+  },
+  "homepage": "https://github.com/rage875/clase_14#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
