@@ -11,9 +11,19 @@ function searchHandler(rq, rs) {
     console.log(rq.query.q)
 }
 
+function authHandler(rq, rs)
+{
+    console.log(rq.body)
+    rs.send('Response by authenthication handler')
+}
+
+app.use(express.json())
 app.use('/' , express.static('static'))
 
 app.all('/', rootHandler)
+
+
+app.post('/auth', authHandler)
 
 app.get('/search', searchHandler), 
 
