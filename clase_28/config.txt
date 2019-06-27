@@ -6,6 +6,8 @@ Descargar paquete express:
 Crear servidor para la recepcion:
                     server.js
 
+correr node server.js
+
 Abrir insomnia y mandar put con la liga
 http://localhost:9000/profile
 
@@ -15,3 +17,5 @@ name <Nombre generico>
 avatar seleccionar opcion de files y adjuntar la imagen
 
 se imprimira la info en la consola
+
+Abrir profile.html con live server o cualquier otro emulador de servidor
