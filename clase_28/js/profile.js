@@ -24,7 +24,7 @@ function createFormData() {
     const name = document.querySelector('input[name="name"]').value
     formData.append('name', name)
     // Files
-    const avatar = document.querySelector('input[name="name"]').files[0]
+    const avatar = document.querySelector('input[name="avatar"]').files[0]
     formData.append('avatar', avatar)
 
     return formData
