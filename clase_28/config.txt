@@ -1,0 +1,17 @@
+Crear proyecto: npm init --yes
+Agregar dependencia: npm i -D browser-sync
+                     npm i -S cors multer
+Descargar paquete express: 
+                    npm install --save express
+Crear servidor para la recepcion:
+                    server.js
+
+Abrir insomnia y mandar put con la liga
+http://localhost:9000/profile
+
+seleccionar multipart
+Agregar campos:
+name <Nombre generico>
+avatar seleccionar opcion de files y adjuntar la imagen
+
+se imprimira la info en la consola
