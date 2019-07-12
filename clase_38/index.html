@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clase 38</title>
+
+  <!-- Libreria temporal -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <input type="text" id="name"/>
+  <input type="text" id="password"/>
+  <input type="button" id="login" value="login"/>
+  <input type="button" id="noticias" value="noticias"/>
+
+  <script>
+    $(document).ready(function (){
+
+      function setCookie(name, value) {
+        document.cookie = name + "=" + value + ";";
+      }
+      function getCookie(name) {
+        let nameEQ = name + "=";
+        console.log(document.cookie);
+        let ca = document.cookie.split(";");
+
+        for(let i=0; i < ca.length; i++){
+          let c = ca[i];
+          while (c.charAt(0) === " ") c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null
+      }
+
+      let token = "";
+      let data = getCookie("token");
+      if(data) {
+        token = data;
+      }
+
+      $("#login").click(function(){
+        let user = {
+          name: $("#name").val(),
+          password: $("#password").val()
+        }
+
+        // Funcion que se ejecuta cada que hacemos click y realiza una consulta
+        $.ajax({
+          url: "http://localhost:9000/login",
+          type: "post",
+          contentType: "application/json; charset=utf-8",
+          data: JSON.stringify(user),
+          success: function(data) {
+            console.log("POST", data);
+            setCookie("token",data);
+            token = data;
+          },
+          error: function(err) {
+            console.log(err);
+          }
+        })
+      })
+
+      $("#noticias").click(function(){
+        $.ajax({
+          url: "http://localhost:9000/noticias",
+          type: "get",
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+          success: function(data) {
+            console.log("GET", data);
+          },
+          beforeSend: function(xhr) {
+            //xhr.setRequestHeader("Accept", "application/json application/x-www-urlencoded; charset=UTF-8");
+            xhr.setRequestHeader("Authorization", "Bearer " + token);
+          }
+        })
+      })
+    })
+  </script>
+</body>
+</html>
